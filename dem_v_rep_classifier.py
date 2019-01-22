@@ -193,11 +193,11 @@ def conv_model(vocab_len, L1_size, window, dropout, epochs, batch_size):
 
 ###############################################################################
 
-vocab_len = 50000
-random_state = 99
+vocab_len = 100000
+random_state = 96
 test_size = 0.25
 
-L1_size = 128
+L1_size = 300
 window = 5
 dropout = 0.2
 epochs = 5
@@ -210,7 +210,7 @@ conv_model(vocab_len, L1_size, window, dropout, epochs, batch_size)
 
 
 '''
-These graphs indicate minor overfitting, but overall better results even with a
+These graphs indicate overfitting for both models, but overall better results even with a
 single convolutional layer.  The first two show the results of training
 without a convolutional layer and the second two show the results with a single
 convolutional layer. The first shows that the loss between the validation and training
@@ -221,6 +221,5 @@ accuracy continues to maximize and the validation accuracy plateaus. The seconds
 show that adding a convolutional layer to the network did indeed increase the accuracy
 by over 3%.  With all hyperparameters and parameters  otherwise the same,the network's
 accuracy was increased, but the graphs indicate that the overfitting was exacerbated.
-
 
 '''
